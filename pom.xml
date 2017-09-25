@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.chenji.demo</groupId>
+    <artifactId>demo-pdf</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>demo-pdf-api</module>
+    </modules>
+
+
+    <repositories>
+        <repository>
+            <id>ppdai</id>
+            <name>ppdai</name>
+            <url>http://maven.repo.ppdai.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+
+    <distributionManagement>
+        <repository>
+            <id>Releases</id>
+            <url>http://maven.repo.ppdai.com/nexus/content/repositories/releases</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>Snapshots</id>
+            <url>http://maven.repo.ppdai.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>pre</id>
+            <properties>
+                <env>pre</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>prd</id>
+            <properties>
+                <env>prd</env>
+            </properties>
+        </profile>
+    </profiles>
+</project>

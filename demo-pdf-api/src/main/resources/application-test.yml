@@ -1,0 +1,24 @@
+info:
+  build:
+    name: @project.artifactId@
+    groupId: @project.groupId@
+    artifactId: @project.artifactId@
+    version: @project.version@
+
+server:
+  port: 8081
+
+endpoints:
+  enabled: true
+  sensitive: false
+  shutdown:
+    enabled: true
+
+nc:
+  api:
+    tempPath:
+    ftpIp:
+    ftpUsername:
+    ftpPsw:
+    ftpRootPath:
+

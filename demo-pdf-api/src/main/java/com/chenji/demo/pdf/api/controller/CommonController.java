@@ -31,6 +31,7 @@ public class CommonController {
         response.getWriter().print("OK");
     }
 
+    //生成并上传pdf
     public String buildAndUploadPdf(PdfModel pdfModel, String loanAgreementNumber) {
         try {
 

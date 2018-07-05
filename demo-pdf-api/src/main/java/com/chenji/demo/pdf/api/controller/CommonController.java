@@ -24,7 +24,6 @@ public class CommonController {
     PdfService pdfService;
     @Autowired
     FtpService ftpService;
-    /*灰度发布所依赖，方法返回OK才会上线*/
     @RequestMapping(value = "/hs")
     public void ok(HttpServletResponse response) throws Exception {
 
